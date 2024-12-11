@@ -70,7 +70,7 @@ const date = moment().format('DD/MM/YYYY');
 ┃   Mode: ${mode}
 ┃   User : ${s.OWNER_NAME}
 ┃
-┣━boniphace md new vision 𒈒━➠
+┣━Alone md new vision 𒈒━➠
 ┗━━━𒈒by Topu Tech𒈒━━┛\n\n`;
 
 
