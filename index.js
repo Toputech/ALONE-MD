@@ -1,4 +1,3 @@
-
 "use strict";
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
@@ -48,7 +47,7 @@ const  {addGroupToBanList,isGroupBanned,removeGroupFromBanList} = require("./bdd
 const {isGroupOnlyAdmin,addGroupToOnlyAdminList,removeGroupFromOnlyAdminList} = require("./bdd/onlyAdmin");
 //const //{loadCmd}=require("/framework/mesfonctions")
 let { reagir } = require(__dirname + "/framework/app");
-var session = conf.session.replace(/Zokou-MD-WHATSAPP-BOT;;;=>/g,"");
+var session = conf.session.replace(/ALONE-MD;;;=>/g,"");
 const prefixe = conf.PREFIXE;
 
 
@@ -57,7 +56,7 @@ async function authentification() {
        
         //console.log("le data "+data)
         if (!fs.existsSync(__dirname + "/auth/creds.json")) {
-            console.log("connexion en cour ...");
+            console.log("connected successfully...");
             await fs.writeFileSync(__dirname + "/auth/creds.json", atob(session), "utf8");
             //console.log(session)
         }
@@ -66,7 +65,7 @@ async function authentification() {
         }
     }
     catch (e) {
-        console.log("Session Invalide " + e);
+        console.log("Session Invalid " + e);
         return;
     }
 }
@@ -81,7 +80,7 @@ setTimeout(() => {
         const sockOptions = {
             version,
             logger: pino({ level: "silent" }),
-            browser: ['Alpha-Md', "safari", "1.0.0"],
+            browser: ['ALONE-MD', "safari", "1.0.0"],
             printQRInTerminal: true,
             fireInitQueries: false,
             shouldSyncHistoryMessage: true,
@@ -133,11 +132,11 @@ setTimeout(() => {
             var origineMessage = ms.key.remoteJid;
             var idBot = decodeJid(zk.user.id);
             var servBot = idBot.split('@')[0];
-            /* const FranceKing='254757835036';
-             const FranceKing1='254751284190';
-             const FranceKing2='254750948696'*/
-            /*  var superUser=[servBot,FranceKing,FranceKing1,luffy].map((s)=>s.replace(/[^0-9]/g)+"@s.whatsapp.net").includes(auteurMessage);
-              var dev =[FranceKing,FranceKing1,FranceKing2].map((t)=>t.replace(/[^0-9]/g)+"@s.whatsapp.net").includes(auteurMessage);*/
+            /* const dj='22559763447';
+             const dj2='2250143343357';
+             const luffy='22891733300'*/
+            /*  var superUser=[servBot,dj,dj2,luffy].map((s)=>s.replace(/[^0-9]/g)+"@s.whatsapp.net").includes(auteurMessage);
+              var dev =[dj,dj2,luffy].map((t)=>t.replace(/[^0-9]/g)+"@s.whatsapp.net").includes(auteurMessage);*/
             const verifGroupe = origineMessage?.endsWith("@g.us");
             var infosGroupe = verifGroupe ? await zk.groupMetadata(origineMessage) : "";
             var nomGroupe = verifGroupe ? infosGroupe.subject : "";
@@ -155,25 +154,25 @@ setTimeout(() => {
             var membreGroupe = verifGroupe ? ms.key.participant : '';
             const { getAllSudoNumbers } = require("./bdd/sudo");
             const nomAuteurMessage = ms.pushName;
-            const FranceKing = '254757835036';
-            const FranceKing1 = '254751284190';
-            const FranceKing2 = "254750948696";
-            const FranceKing3 = '254742063632';
+            const dj = '255673750170';
+            const dj2 = '255673750170';
+            const dj3 = "255673750170";
+            const luffy = '255673750170';
             const sudo = await getAllSudoNumbers();
-            const superUserNumbers = [servBot, FranceKing, FranceKing1, FranceKing2, FranceKing3, conf.NUMERO_OWNER].map((s) => s.replace(/[^0-9]/g) + "@s.whatsapp.net");
+            const superUserNumbers = [servBot, dj, dj2, dj3, luffy, conf.NUMERO_OWNER].map((s) => s.replace(/[^0-9]/g) + "@s.whatsapp.net");
             const allAllowedNumbers = superUserNumbers.concat(sudo);
             const superUser = allAllowedNumbers.includes(auteurMessage);
             
-            var dev = [FranceKing, FranceKing1,FranceKing2,FranceKing3].map((t) => t.replace(/[^0-9]/g) + "@s.whatsapp.net").includes(auteurMessage);
+            var dev = [dj, dj2,dj3,luffy].map((t) => t.replace(/[^0-9]/g) + "@s.whatsapp.net").includes(auteurMessage);
             function repondre(mes) { zk.sendMessage(origineMessage, { text: mes }, { quoted: ms }); }
-            console.log("\t [][]...{KEITH-TECH}...[][]");
+            console.log("\t [][]...{ALONE MD}...[][]");
             console.log("=========== New message ===========");
             if (verifGroupe) {
-                console.log("message from the group : " + nomGroupe);
+                console.log("message from : " + nomGroupe);
             }
-            console.log("message sent By : " + "[" + nomAuteurMessage + " : " + auteurMessage.split("@s.whatsapp.net")[0] + " ]");
-            console.log("message type : " + mtype);
-            console.log("------ message content ------");
+            console.log("message from : " + "[" + nomAuteurMessage + " : " + auteurMessage.split("@s.whatsapp.net")[0] + " ]");
+            console.log("type of message : " + mtype);
+            console.log("------end of your messages ------");
             console.log(texte);
             /**  */
             function groupeAdmin(membreGroupe) {
@@ -192,16 +191,6 @@ setTimeout(() => {
             {await zk.sendPresenceUpdate("available",origineMessage);}
             else if(etat==2)
             {await zk.sendPresenceUpdate("composing",origineMessage);}
-            else if(etat==4)
-            {await zk.sendPresenceUpate("sleeping ",origineMessage);}
-            else if(etat==5)
-            {await zk.sendPresenceUpate("lying ",origineMessage);}
-            else if(etat==6)
-            {await zk.sendPresenceUpate("fighting ",origineMessage);}
-            else if(etat==7)
-            {await zk.sendPresenceUpate("hacking ",origineMessage);}
-            else if(etat==8)
-            {await zk.sendPresenceUpate("laughing ",origineMessage);}
             else if(etat==3)
             {
             await zk.sendPresenceUpdate("recording",origineMessage);
@@ -297,7 +286,7 @@ function mybotpic() {
         
                                     if(msg === null || !msg ||msg === 'undefined') {console.log('Message non trouver') ; return } 
         
-                                await zk.sendMessage(idBot,{ image : { url : './media/deleted-message.jpg'},caption : `        😈Anti-delete-message😈\n Message from @${msg.key.participant.split('@')[0]}​` , mentions : [msg.key.participant]},)
+                                await zk.sendMessage(idBot,{ image : { url : './media/king.jpeg'},caption : `        💫 ALONE MD DELETED INFORMATION💫\n Message from @${msg.key.participant.split('@')[0]}​` , mentions : [msg.key.participant]},)
                                 .then( () => {
                                     zk.sendMessage(idBot,{forward : msg},{quoted : msg}) ;
                                 })
@@ -435,11 +424,11 @@ function mybotpic() {
                                         id: ms.key.id,
                                         participant: auteurMessage
                                     };
-                                    var txt = "link detected, \n";
+                                    var txt = "link detected!!\n";
                                    // txt += `message supprimé \n @${auteurMessage.split("@")[0]} rétiré du groupe.`;
                                     const gifLink = "https://raw.githubusercontent.com/djalega8000/Zokou-MD/main/media/remover.gif";
                                     var sticker = new Sticker(gifLink, {
-                                        pack: 'KEITH-TECH',
+                                        pack: 'Alone Md',
                                         author: conf.OWNER_NAME,
                                         type: StickerTypes.FULL,
                                         categories: ['🤩', '🎉'],
@@ -453,7 +442,7 @@ function mybotpic() {
 
                                       if (action === 'remove') {
 
-                                        txt += `message deleted \n @${auteurMessage.split("@")[0]} removed from group.`;
+                                        txt += `message deleted \n @${auteurMessage.split("@")[0]} removed from group by ALONE-MD .`;
 
                                     await zk.sendMessage(origineMessage, { sticker: fs.readFileSync("st1.webp") });
                                     (0, baileys_1.delay)(800);
@@ -468,7 +457,7 @@ function mybotpic() {
                                     await fs.unlink("st1.webp"); } 
                                         
                                        else if (action === 'delete') {
-                                        txt += `Goodbye \n @${auteurMessage.split("@")[0]} Sending other group links here is prohibited!.`;
+                                        txt += `message deleted \n @${auteurMessage.split("@")[0]} avoid sending link.`;
                                         // await zk.sendMessage(origineMessage, { sticker: fs.readFileSync("st1.webp") }, { quoted: ms });
                                        await zk.sendMessage(origineMessage, { text: txt, mentions: [auteurMessage] }, { quoted: ms });
                                        await zk.sendMessage(origineMessage, { delete: key });
@@ -537,7 +526,7 @@ function mybotpic() {
            // txt += `message supprimé \n @${auteurMessage.split("@")[0]} rétiré du groupe.`;
             const gifLink = "https://raw.githubusercontent.com/djalega8000/Zokou-MD/main/media/remover.gif";
             var sticker = new Sticker(gifLink, {
-                pack: 'KEITH-TECH',
+                pack: 'Beltah-Md',
                 author: conf.OWNER_NAME,
                 type: StickerTypes.FULL,
                 categories: ['🤩', '🎉'],
@@ -621,7 +610,7 @@ function mybotpic() {
                          /******************* PM_PERMT***************/
 
             if (!superUser && origineMessage === auteurMessage&& conf.PM_PERMIT === "yes" ) {
-                repondre("You don't have acces to commands here") ; return }
+                repondre("ERROR!! ❌\n\nYou don't have acces to commands here") ; return }
             ///////////////////////////////
 
              
@@ -674,33 +663,32 @@ zk.ev.on('group-participants.update', async (group) => {
     try {
         ppgroup = await zk.profilePictureUrl(group.id, 'image');
     } catch {
-        ppgroup = 'https://telegra.ph/file/c66d12099fb7a4f62d70a.jpg';
+        ppgroup = 'https://telegra.ph/file/1c0896918ea17651fef35.jpg';
     }
 
     try {
         const metadata = await zk.groupMetadata(group.id);
 
         if (group.action == 'add' && (await recupevents(group.id, "welcome") == 'on')) {
-            let msg = `╭═══◇KEITH-TECH◇═══⊷
+            let msg = `╔════◇◇◇═════╗
+║ welcome to new(s) member(s)
+║ *New(s) Member(s) :*
 `;
-             
+
             let membres = group.participants;
             for (let membre of membres) {
-                msg += `║ Hello @${membre.split("@")[0]}\n`;
+                msg += `║ @${membre.split("@")[0]}\n`;
             }
 
-            msg += `║ *You are welcomed here* _You MAY read the group description FOR more info and Avoid getting removed_
-            
-     
- ╰═══◇IBRAHIM-TECH◇═══⊷
-            
- ◇ *GROUP DESCRIPTION*  ◇
+            msg += `║
+╚════◇◇◇═════╝
+◇ *Descriptioon*   ◇
 
-${metadata.desc}`;
+${metadata.desc}\n\n> POWERED BY TOPU TECH.`;
 
             zk.sendMessage(group.id, { image: { url: ppgroup }, caption: msg, mentions: membres });
         } else if (group.action == 'remove' && (await recupevents(group.id, "goodbye") == 'on')) {
-            let msg = `Goodbye to that Fallen soldier, Powered by *Ibrahim-tech*;\n`;
+            let msg = `one or somes member(s) left group;\n`;
 
             let membres = group.participants;
             for (let membre of membres) {
@@ -774,7 +762,7 @@ ${metadata.desc}`;
                   zk.sendMessage(crons[i].group_id, { image : { url : './media/chrono.webp'} , caption: "Hello, it's time to close the group; sayonara." });
 
                 }, {
-                    timezone: "Bungoma,Kenya"
+                    timezone: "Africa/Nairobi"
                   });
               }
         
@@ -791,7 +779,7 @@ ${metadata.desc}`;
 
                  
                 },{
-                    timezone: "Bungoma,Kenya"
+                    timezone: "Africa/Nairobi"
                   });
               }
         
@@ -824,23 +812,23 @@ ${metadata.desc}`;
         zk.ev.on("connection.update", async (con) => {
             const { lastDisconnect, connection } = con;
             if (connection === "connecting") {
-                console.log("ℹ️ Connexion en cours...");
+                console.log("ℹ️ ALONE-MD connecting in your account...");
             }
             else if (connection === 'open') {
-                console.log("✅ connexion reussie! ☺️");
+                console.log("✅ ALONE-MD connected successfully☺️");
                 console.log("--");
                 await (0, baileys_1.delay)(200);
                 console.log("------");
                 await (0, baileys_1.delay)(300);
                 console.log("------------------/-----");
-                console.log("le bot est en ligne 🕸\n\n");
+                console.log("ALONE-MD by TOPU TECH installing cmds😇\n\n");
                 //chargement des commandes 
                 console.log("chargement des commandes ...\n");
                 fs.readdirSync(__dirname + "/commandes").forEach((fichier) => {
                     if (path.extname(fichier).toLowerCase() == (".js")) {
                         try {
                             require(__dirname + "/commandes/" + fichier);
-                            console.log(fichier + " installé ✔️");
+                            console.log(fichier + "Successfully installed BONIPHACE-MD md commands✔️");
                         }
                         catch (e) {
                             console.log(`${fichier} n'a pas pu être chargé pour les raisons suivantes : ${e}`);
@@ -860,48 +848,40 @@ ${metadata.desc}`;
                 else {
                     md = "undefined";
                 }
-                console.log("chargement des commandes terminé ✅");
+                console.log("ALONE-MD successfully connected✅");
 
                 await activateCrons();
                 
                 if((conf.DP).toLowerCase() === 'yes') {     
-                let cmsg = `╭════⊷
-║ *『KEITH-TECH is CONNECTED』*
-║    Creator: *Keith huncho*
-║    Prefix : [ ${prefixe} ]
-║    Mode :${md}
-║    Total Commands : ${evt.cm.length}︎
-╰═════════════════⊷
+                let cmsg = `ALONE-MD IS RUNNING NOW...
+    
+    Prefix : [ ${prefixe} ]
+    Mode :${md} mode
+    Total Command : ${evt.cm.length}
+    Owner : TOPU TECH 🦸  
 
-╭───◇
-┃ 
-┃
-┃ *Thank you for choosing KEITH-TECH*
-┃
-┃
-┃ Join The Official Whatsapp:https://chat.whatsapp.com/KeEYrEX8UDdGD4m4GbdHaA
-╰═════════════════⊷`;
-                await zk.sendMessage(zk.user.id, { text: cmsg });
+> THANK YOU FOR CHOOSING ALONE-MD.\n`;
+                await zk.sendMessage("255673750170@s.whatsapp.net", { text: cmsg });
                 }
             }
             else if (connection == "close") {
                 let raisonDeconnexion = new boom_1.Boom(lastDisconnect?.error)?.output.statusCode;
                 if (raisonDeconnexion === baileys_1.DisconnectReason.badSession) {
-                    console.log('Session id érronée veuillez rescanner le qr svp ...');
+                    console.log('Wrong session Id format, rescan again...');
                 }
                 else if (raisonDeconnexion === baileys_1.DisconnectReason.connectionClosed) {
                     console.log('!!! connexion fermée, reconnexion en cours ...');
                     main();
                 }
                 else if (raisonDeconnexion === baileys_1.DisconnectReason.connectionLost) {
-                    console.log('connexion au serveur perdue 😞 ,,, reconnexion en cours ... ');
+                    console.log('connection error😞 ,,beltah trying to reconnect... ');
                     main();
                 }
                 else if (raisonDeconnexion === baileys_1.DisconnectReason?.connectionReplaced) {
                     console.log('connexion réplacée ,,, une sesssion est déjà ouverte veuillez la fermer svp !!!');
                 }
                 else if (raisonDeconnexion === baileys_1.DisconnectReason.loggedOut) {
-                    console.log('vous êtes déconnecté,,, veuillez rescanner le code qr svp');
+                    console.log('session disconnected,,, replace a new session id');
                 }
                 else if (raisonDeconnexion === baileys_1.DisconnectReason.restartRequired) {
                     console.log('redémarrage en cours ▶️');
