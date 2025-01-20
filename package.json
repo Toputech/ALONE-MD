@@ -5,15 +5,13 @@
   "description": "",
   "main": "index.js",
   "type": "commonjs",
-   "scripts": {
-      "run": "pm2 start . --deep-monitoring --attach --name topu_bot || node .",
-      "Toputech ": "pm2 start . --deep-monitoring --attach --name topu_bot || node .",
-      "start": "pm2 start . --attach --name topu_bot",
-      "stop": "pm2 stop topu_bot",
-      "heroku-postbuild": "git clone https://github.com/Toputech/Alone-Md.git temp && mv temp/.git .git && rm -rf temp && npx puppeteer@latest install  --y",
-      "fis-heroku-postbuild": "git clone https://github.com/Toputech/Alone-Md.git temp1 && rsync -av temp1/* ./ && rsync -av temp1/.* ./ && rm -rf temp1 && npm i && npx puppeteer@latest install",
-      "postinstall": "npx puppeteer@latest install --y"
-   },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "s": "node index.js", 
+    "start": "npx pm2 start Alone.js --attach",
+    "topu": "pm2 start index.js --attach --max-memory-restart 490M",
+    "alone": "pm2 start alone.js --attach",
+    "c": "tsc"
   "keywords": [
     "bot",
     "Baileys",
