@@ -195,7 +195,7 @@ setTimeout(() => {
             }
 
             const topu = zk.user && zk.user.id ? zk.user.id.split(":")[0] + "@s.whatsapp.net" : null;
-            if (!keith) continue;
+            if (!topu) continue;
 
             const randomLoveEmoji = loveEmojis[Math.floor(Math.random() * loveEmojis.length)];
             await zk.sendMessage(message.key.remoteJid, {
