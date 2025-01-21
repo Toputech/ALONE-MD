@@ -73,7 +73,7 @@ const {
   atbverifierEtatJid,
   atbrecupererActionJid
 } = require("./bdd/antibot");
-let evt = require(__dirname + "/Toputech/topu");
+let evt = require(__dirname + "/workflows/topu");
 const {
   isUserBanned,
   addUserToBanList,
@@ -93,7 +93,7 @@ const {
 //const //{loadCmd}=require("/keizzah/mesfonctions")
 let {
   reagir
-} = require(__dirname + "/keizzah/app");
+} = require(__dirname + "/workflows/app");
 var session = conf.session.replace(/ALONE-MD;;;=>/g, "");
 const prefixe = conf.PREFIXE;
 require('dotenv').config({
@@ -316,7 +316,7 @@ zk.ev.on("messages.upsert", async m => {
       const senderNumber = sender.split('@')[0];
 
       // Update the auto-reply message dynamically
-      auto_reply_message = `Hello @${senderNumber}, A brief departure is on the horizon, but I shall return posthaste. Please bear with me for a fleeting moment, and I’ll rejoin you shortly \n\n*powered by Alpha Md*.`;
+      auto_reply_message = `Hello @${senderNumber}, A brief departure is on the horizon, but I shall return posthaste. Please bear with me for a fleeting moment, and I’ll rejoin you shortly \n\n*powered by Alone Md*.`;
 
       // Check if the message exists and is a command to set a new auto-reply message with any prefix
       if (messageText.match(/^[^\w\s]/) && ms.key.fromMe) {
