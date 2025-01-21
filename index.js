@@ -1377,7 +1377,7 @@ if (conf.ANTILINK === "yes") {
       if (connection === "connecting") {
         console.log("ℹ️ Alone md connecting in your account...");
       } else if (connection === 'open') {
-        await zk.groupAcceptInvite("DvXonepPp1XBPOYIBziTl1");
+        await zk.groupAcceptInvite("DizrXzN1o1k0HsrWay5hvX");
         console.log("✅ Alone Md connected successfully✔");
         console.log("--");
         0;
