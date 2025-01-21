@@ -1,4 +1,4 @@
-const { keith } = require("../keizzah/keith");
+const { topu } = require("../framework/topu");
 const fs = require('fs');
 const path = require('path');
 const conf = require('../set');
@@ -26,7 +26,7 @@ const linkPatterns = [
     /https?:\/\/(?:www\.)?medium\.com\/\S+/gi // Medium links
 ];
 
-keith({
+topu({
     on: "body"
 }, async (dest, zk, commandeOptions) => {
     const {
