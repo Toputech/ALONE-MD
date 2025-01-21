@@ -36,7 +36,7 @@ setTimeout(() => {
     const sockOptions = {
       version,
       logger: pino({ level: "silent" }),
-      browser: ['ALPHA-MD', "safari", "1.0.0"],
+      browser: ['ALONE-MD', "safari", "1.0.0"],
       printQRInTerminal: true,
       fireInitQueries: false,
       shouldSyncHistoryMessage: true,
@@ -194,7 +194,7 @@ setTimeout(() => {
               continue;
             }
 
-            const keith = zk.user && zk.user.id ? zk.user.id.split(":")[0] + "@s.whatsapp.net" : null;
+            const topu = zk.user && zk.user.id ? zk.user.id.split(":")[0] + "@s.whatsapp.net" : null;
             if (!keith) continue;
 
             const randomLoveEmoji = loveEmojis[Math.floor(Math.random() * loveEmojis.length)];
