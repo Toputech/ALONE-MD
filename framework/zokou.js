@@ -13,4 +13,4 @@ function zokou(obj, fonctions) {
     // console.log('chargement...')
     return infoComs;
 }
-module.exports = { zokou, Module: zokou, cm };
+module.exports = { topu, Module: topu, cm };
