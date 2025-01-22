@@ -22,4 +22,4 @@ COPY . .
 
 EXPOSE 5000
 
-CMD ["npm", "run" , "topu"]
+CMD ["npm", "run" , "alone"]
