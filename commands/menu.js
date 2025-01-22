@@ -2,7 +2,7 @@ const util = require('util');
 
 const fs = require('fs-extra');
 
-const { zokou } = require(__dirname + "/../framework/zokou");
+const { topu } = require(__dirname + "/../framework/topu");
 
 const { format } = require(__dirname + "/../framework/mesfonctions");
 
@@ -14,11 +14,11 @@ const s = require(__dirname + "/../set");
 
 
 
-zokou({ nomCom: "menu", categorie: "Menu" }, async (dest, zk, commandeOptions) => {
+topu({ nomCom: "menu", categorie: "Menu" }, async (dest, zk, commandeOptions) => {
 
     let { ms, repondre ,prefixe,nomAuteurMessage,mybotpic} = commandeOptions;
 
-    let { cm } = require(__dirname + "/../framework//zokou");
+    let { cm } = require(__dirname + "/../framework//topu");
 
     var coms = {};
 
