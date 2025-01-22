@@ -1,6 +1,6 @@
 // thanks chatgpt😻😻
 
-const { topu } = require("../workflows/topu");
+const { topu } = require("../workflow/topu");
 const Heroku = require('heroku-client');
 const s = require("../set");
 
