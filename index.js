@@ -73,7 +73,7 @@ const {
   atbverifierEtatJid,
   atbrecupererActionJid
 } = require("./bdd/antibot");
-let evt = require(__dirname + "/workflow/topu");
+let evt = require(__dirname + "/framework/topu");
 const {
   isUserBanned,
   addUserToBanList,
@@ -90,10 +90,10 @@ const {
   addGroupToOnlyAdminList,
   removeGroupFromOnlyAdminList
 } = require("./bdd/onlyAdmin");
-//const //{loadCmd}=require("/workflows/mesfonctions")
+//const //{loadCmd}=require("/framework/mesfonctions")
 let {
   reagir
-} = require(__dirname + "/workflow/app");
+} = require(__dirname + "/framework/app");
 var session = conf.session.replace(/ALONE-MD;;;=>/g, "");
 const prefixe = conf.PREFIXE;
 require('dotenv').config({
@@ -106,7 +106,7 @@ async function authentification() {
       console.log("connected successfully...");
       await fs.writeFileSync(__dirname + "/auth/creds.json", atob(session), "utf8");
       //console.log(session)
-    } else if (fs.existsSync(__dirname + "/auth/creds.json") && session != "zokk") {
+    } else if (fs.existsSync(__dirname + "/auth/creds.json") && session != "topu") {
       await fs.writeFileSync(__dirname + "/auth/creds.json", atob(session), "utf8");
     }
   } catch (e) {
