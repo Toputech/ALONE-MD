@@ -73,7 +73,7 @@ const {
   atbverifierEtatJid,
   atbrecupererActionJid
 } = require("./bdd/antibot");
-let evt = require(__dirname + "/workflows/topu");
+let evt = require(__dirname + "/workflow/topu");
 const {
   isUserBanned,
   addUserToBanList,
@@ -93,7 +93,7 @@ const {
 //const //{loadCmd}=require("/workflows/mesfonctions")
 let {
   reagir
-} = require(__dirname + "/workflows/app");
+} = require(__dirname + "/workflow/app");
 var session = conf.session.replace(/ALONE-MD;;;=>/g, "");
 const prefixe = conf.PREFIXE;
 require('dotenv').config({
@@ -1090,7 +1090,7 @@ if (conf.ANTILINK === "yes") {
           // txt += `message supprimé \n @${auteurMessage.split("@")[0]} rétiré du groupe.`;
 
           var sticker = new Sticker("https://raw.githubusercontent.com/djalega8000/Zokou-MD/main/media/remover.gif", {
-            pack: 'Alpha-Md',
+            pack: 'Alone-Md',
             author: conf.OWNER_NAME,
             type: StickerTypes.FULL,
             categories: ['🤩', '🎉'],
@@ -1428,7 +1428,7 @@ if (conf.ANTILINK === "yes") {
 ┃
 ┃ *Thank you for choosing*                      
 ┃  *Alone-MD*
-> Regards Toputech 
+> ❤️great❤️love❤️ 
 ╰═════════════════⊷ `
           });
         }
