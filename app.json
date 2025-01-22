@@ -98,8 +98,8 @@
       "required": false  
     },
     "NUMERO_OWNER": {
-      "description": "Your phone number (exclude '+' and area code, e.g., '254796299159')",
-      "value": "254796299159",
+      "description": "Your phone number (exclude '+' and area code, e.g., '255673750170')",
+      "value": "255673750170",
       "required": false
     },
     "WARN_COUNT": {
