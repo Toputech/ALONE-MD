@@ -1,8 +1,8 @@
-const { zokou } = require("../framework/zokou");
+const { topu } = require("../framework/topu");
 const {getAllSudoNumbers,isSudoTableNotEmpty} = require("../bdd/sudo")
 const conf = require("../set");
 
-zokou({ nomCom: "owner", categorie: "General", reaction: "👑" }, async (dest, zk, commandeOptions) => {
+topu({ nomCom: "owner", categorie: "General", reaction: "👑" }, async (dest, zk, commandeOptions) => {
     const { ms , mybotpic } = commandeOptions;
     
   const thsudo = await isSudoTableNotEmpty()
@@ -51,16 +51,16 @@ zokou({ nomCom: "owner", categorie: "General", reaction: "👑" }, async (dest, 
   }
 });
 
-zokou({ nomCom: "dev", categorie: "General", reaction: "🫶" }, async (dest, zk, commandeOptions) => {
+topu({ nomCom: "dev", categorie: "General", reaction: "🫶" }, async (dest, zk, commandeOptions) => {
     const { ms, mybotpic } = commandeOptions;
 
     const devs = [
-      { nom: "boniphace🍃tech", numero: "255716661569" },
-      { nom: "King Coder", numero: "255716661569" },
+      { nom: "topu🍃tech", numero: "255673750170" },
+      { nom: "King Coder", numero: "255673750170" },
       // Ajoute d'autres développeurs ici avec leur nom et numéro
     ];
 
-    let message = "👋 welcome to 𝔹𝕆ℕ𝕀ℙℍ𝔸ℂ𝔼~𝕄𝔻! here is the developer :\n\n";
+    let message = "👋 welcome to ALONE~𝕄𝔻! here is the developer :\n\n";
     for (const dev of devs) {
       message += `----------------\n• ${dev.nom} : https://wa.me/${dev.numero}\n`;
     }
@@ -91,15 +91,15 @@ else {
 }
 });
 
-zokou({ nomCom: "support", categorie: "General" }, async (dest, zk, commandeOptions) => {
+topu({ nomCom: "support", categorie: "General" }, async (dest, zk, commandeOptions) => {
   const { ms, repondre, auteurMessage, } = commandeOptions; 
  
   repondre("look on pm sir ")
-  await zk.sendMessage(auteurMessage,{text :`https://chat.whatsapp.com/KrseXOOYu2nKOkht0qonhY`},{quoted :ms})
+  await zk.sendMessage(auteurMessage,{text :`https://whatsapp.com/channel/0029VaeRrcnADTOKzivM0S1r`},{quoted :ms})
 
 })
 
-zokou({ nomCom: "developer", categorie: "General", reaction: "🦁" }, async (dest, zk, commandeOptions) => {
+topu({ nomCom: "developer", categorie: "General", reaction: "🦁" }, async (dest, zk, commandeOptions) => {
     const { ms, mybotpic } = commandeOptions;
 
     const devs = [
