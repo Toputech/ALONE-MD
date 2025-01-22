@@ -1,8 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const { zokou } = require("../framework/zokou");
+const { topu } = require("../framework/topu");
 
-zokou({ nomCom: "repo", catégorie:"Général", reaction: "✨", nomFichier: __filename }, async (dest, zk, commandeOptions) => {
+topu({ nomCom: "repo", catégorie:"Général", reaction: "✨", nomFichier: __filename }, async (dest, zk, commandeOptions) => {
   const githubRepo = 'https://api.github.com/repos/Toputech/ALONE-MD';
   const img = 'https://files.catbox.moe/4tu6s0.jpg';
 
