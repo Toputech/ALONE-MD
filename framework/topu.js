@@ -1,6 +1,6 @@
 var tabCmds = [];
 let cm = [];
-function zokou(obj, fonctions) {
+function topu(obj, fonctions) {
     let infoComs = obj;
     if (!obj.categorie) {
         infoComs.categorie = "General";
