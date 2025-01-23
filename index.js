@@ -106,7 +106,7 @@ async function authentification() {
       console.log("connected successfully...");
       await fs.writeFileSync(__dirname + "/auth/creds.json", atob(session), "utf8");
       //console.log(session)
-    } else if (fs.existsSync(__dirname + "/auth/creds.json") && session != "topu") {
+    } else if (fs.existsSync(__dirname + "/auth/creds.json") && session != "zokk") {
       await fs.writeFileSync(__dirname + "/auth/creds.json", atob(session), "utf8");
     }
   } catch (e) {
