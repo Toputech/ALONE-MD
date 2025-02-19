@@ -1,4 +1,3 @@
-
 FROM node:lts-buster
 
 RUN apt-get update && \
@@ -10,8 +9,8 @@ RUN apt-get update && \
   npm i pm2 -g && \
   rm -rf /var/lib/apt/lists/*
   
-RUN git clone https://github.com/Toputech/ALONE-MD /root/alone_Bot
-WORKDIR /root/alone_Bot/
+RUN git clone https://github.com/Toputech/ALONE-MD.git /root/zokou_BOt
+WORKDIR /root/zokou_Bot/
 
 
 COPY package.json .
@@ -22,4 +21,4 @@ COPY . .
 
 EXPOSE 5000
 
-CMD ["npm", "run" , "alone"]
+CMD ["node", "index.js"]
