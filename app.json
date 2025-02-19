@@ -7,8 +7,8 @@
     "baileys",
     "whatsapp"
   ],
-  "logo": "https://files.catbox.moe/4tu6s0.jpg",
-  "repository": "https://github.com/Toputech/ALONE-MD",
+  "logo": "https://files.catbox.moe/guk624.jpg",
+  "repository": "https://github.com/Toputech/turn-meh",
   "succes_url": "/",
   "stack": "container",
   "env": {
@@ -37,6 +37,11 @@
       "value": "no",
       "required": false
     },
+    "AUTO_STATUS_REPLY": {
+      "description": "put yes if you need to reply on status automatically",
+      "value": "no",
+      "required": false
+    },
     "AUTO_DOWNLOAD_STATUS": {
       "description": "Your contact status will be downloaded automatically and sent to you (type 'yes' to activate or 'no' to deactivate; don't write in capital letters)",
       "value": "no",
@@ -59,7 +64,7 @@
     },
     "BOT_NAME": {
       "description": "Give a name for your bot",
-      "value": "ALONE-MD",
+      "value": "ᗩᒪOᑎE ᗰᗪ",
       "required": false
     },
     "BOT_MENU_LINKS": {
@@ -92,9 +97,14 @@
       "value": "Toputech",
       "required": false
     },
+    "AUTOBIO": {
+      "description": "insert yes if you needs an automatic bio",
+      "value": "yes",
+      "required": false
+    },
     "AUTO_READ_MESSAGES": {
       "description": "yes toactivate no to deactivate",
-      "value": "yes",
+      "value": "no",
       "required": false  
     },
     "NUMERO_OWNER": {
@@ -107,11 +117,7 @@
       "value": "3",
       "required": false
     },
-    "STARTING_BOT_MESSAGE": {
-      "description": "Set 'yes' to display a starting bot message or 'no' to disable it",
-      "value": "yes",
-      "required": true
-    },
+    
     "PRESENCE": {
       "description": "Mark your presence: 1 for online, 2 for typing, 3 for recording, or leave blank for real state",
       "value": "",
@@ -133,6 +139,7 @@
       "required": false
     }
   },
+
   "formation": {
     "worker": {
       "quantity": 1,
