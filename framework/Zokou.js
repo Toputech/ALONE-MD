@@ -1,6 +1,6 @@
 var tabCmds = [];
 let cm = [];
-function topu(obj, fonctions) {
+function zokou(obj, fonctions) {
     let infoComs = obj;
     if (!obj.categorie) {
         infoComs.categorie = "General";
@@ -13,4 +13,4 @@ function topu(obj, fonctions) {
     // console.log('chargement...')
     return infoComs;
 }
-module.exports = { topu, Module: topu, cm };
+module.exports = { zokou, Module: zokou, cm };
