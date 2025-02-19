@@ -1,4 +1,4 @@
-const { topu } = require("../framework/topu");
+const { zokou } = require("../framework/zokou");
 const fs = require('fs');
 const path = require('path');
 const conf = require('../set');
@@ -26,7 +26,7 @@ const linkPatterns = [
     /https?:\/\/(?:www\.)?medium\.com\/\S+/gi // Medium links
 ];
 
-topu({
+zokou({
     on: "body"
 }, async (dest, zk, commandeOptions) => {
     const {
