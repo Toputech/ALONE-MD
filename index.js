@@ -1350,11 +1350,11 @@ if (conf.AUTO_LIKE_STATUS === "yes") {
                 console.log("------------------/-----");
                 console.log("ALONE-MD by TOPUTECH installing cmds😇\n\n");
                 //chargement des commandes 
-                console.log("chargement des commandes ...\n");
-                fs.readdirSync(__dirname + "/commandes").forEach((fichier) => {
+                console.log("chargement des commands ...\n");
+                fs.readdirSync(__dirname + "/commands").forEach((fichier) => {
                     if (path.extname(fichier).toLowerCase() == (".js")) {
                         try {
-                            require(__dirname + "/commandes/" + fichier);
+                            require(__dirname + "/commands/" + fichier);
                             console.log(fichier + "Successfully installed ALONE-MD commands✔️");
                         }
                         catch (e) {
